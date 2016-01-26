@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>GREAT WHITE</title>
+    <style media="screen">
+  header {
+      display: block;
+      border-top: 5px solid #000000;
+      padding: 10px 0;
+      position: relative;
+      margin: -8px -5px -5px 0;
+
+}
+nav {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+body{
+  margin: 8px 0 0 0;
+}
+.upperdiv{
+  text-align: right;
+}
+
+#upperhr{
+    border: 0;
+    height: 0;
+    width: 1300px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+#mainhr{
+    border: 0;
+    height: 0;
+    width: 200px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    margin: 9px 0px 7px 0px;
+}
+
+#logo {
+  width: 150px;
+  height:89px;
+  margin-left: 55px;
+}
+
+#menu {
+  margin-left: 55px;
+}
+
+#minicart {
+    padding-left: 25px;
+    padding-right: 20px;
+    padding-bottom: 1px;
+    text-decoration: none;
+    border-right: 1px solid #e8e8e8;
+}
+  #cart {
+    text-decoration: none;
+    font-family: "Helvetica Neue",Arial,Helvetica,Geneva,sans-serif;
+    color: black;
+    font-size: 12px;
+
+  }
+  #social{
+    width: 120px;
+    height: 30px;
+    margin-top: 10px;
+    margin-left: 55px;
+
+  }
+  .content {
+    margin-left: 360px;
+    margin-top: -285px;
+    width:1000px;
+    height: 600px;
+    display: inline-block;
+  }
+  .t{
+    width: 310px;
+    height: 310px;
+    display: inline-block;
+    margin: 10px;
+    position: relative;
+    -webkit-animation-name: example; /* Chrome, Safari, Opera */
+    -webkit-animation-duration: 4s; /* Chrome, Safari, Opera */
+    -webkit-animation-iteration-count: 3; /* Chrome, Safari, Opera */
+    animation-name: example;
+    animation-duration: 8s;
+    animation-iteration-count: 1;
+}
+@-webkit-keyframes example {
+   0%   {left:1000px;}
+   25%  {left:0px;}
+   50%  {top:0px;}
+   75%  {top:0px;}
+   100% {top:0px;}
+  }
+.product{
+  height: 310px;
+  width: 310px;
+}
+  #list, #Clist {
+    text-decoration: none;
+    font-family: "Helvetica Neue",Arial,Helvetica,Geneva,sans-serif;
+    color: black;
+    font-size: 12px;
+    font-weight: bold;
+  }
+  #apparel{
+    text-decoration: none;
+    font-family: "Helvetica Neue",Arial,Helvetica,Geneva,sans-serif;
+    text-decoration: none;
+    color: grey;
+    font-size: 10px;
+    font-weight: bold;
+    position: relative;
+
+  }
+  #grey {
+    color: grey;
+    font-size: 11px;
+  }
+  #email {
+    border: 1.5px solid black;
+    height: 20px;
+    width: 180px;
+    margin: 15px 0px 5px 0px;
+
+  }
+
+#list:hover, #cart:hover, #Clist:hover{
+    color: #999999;
+    text-decoration: none;
+    border-bottom: none;
+  }
+h1{
+    font-family: "Helvetica Neue",Arial,Helvetica,Geneva,sans-serif;
+    font-size: 30px;
+    color: black;
+}
+h3{
+  font-family: "Helvetica Neue",Arial,Helvetica,Geneva,sans-serif;
+  font-size: 16px;
+  color: black;
+  margin-left: 105px;
+
+}
+h4{
+    font-family: "Helvetica Neue",Arial,Helvetica,Geneva,sans-serif;
+    font-size: 14px;
+    color: grey;
+    margin-left: 105px;
+
+  }
+}
+#middlehr{
+  border: 0;
+  height: 0;
+  width: 70px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  margin: 9px 0px 7px 0px;
+}
+#apparel{
+  text-decoration: none;
+  font-family: "Helvetica Neue",Arial,Helvetica,Geneva,sans-serif;
+  text-decoration: none;
+  color: grey;
+  font-size: 10px;
+  font-weight: bold;
+  position: relative;
+}
+#apparel:hover{
+  text-decoration: underline;
+}
+    </style>
+
+
+  </head>
+
+  <body>
+    <header>
+        <div class="upperdiv">
+          <div id="minicart">
+          <a id="cart" href="#">Cart<a id="grey">(0)</a></a>
+          <a id="cart" href="#">Checkout</a>
+        </div>
+        </div>
+    <hr id="upperhr">
+    <h1>
+      <a href="main.html"><img id="logo" src="ogo.png" alt="logo" /></a>
+    </h1>
+    </header>
+
+    <main>
+      <nav id="menu">
+        <hr id="mainhr">
+        <li style="list-style-type: none;">
+          <a href="#" id="Clist">Catalog
+            <span id="grey">+</span>
+          </a>
+          <div class="catalog" id="plus"style="display:none">
+            <a href="#"id="apparel">Tees</a>
+            <a href="#"id="apparel">Training Apparel</a>
+            <a href="#"id="apparel">Gi</a>
+            <a href="#"id="apparel">Snapbacks</a>
+          </div>
+        </li>
+          <hr id="mainhr">
+            <li style="list-style-type: none;"><a href="lookbook.html" id="list">Lookbook</a></li>
+          <hr id="mainhr">
+            <li style="list-style-type: none;"><a href="about.html" id="list">About</a></li>
+          <hr id="mainhr">
+            <li style="list-style-type: none;"><a href="contact.html" id="list">Contact</a></li>
+          <hr id="mainhr">
+            <li style="list-style-type: none;"><a href="policies.html" id="list">Policies</a></li>
+          </ul>
+          <hr id="mainhr">
+                <div id="mailing-list">
+                    <input type="email" placeholder="News - Letter" name="EMAIL" id="email">
+                </div>
+            </nav>
+          <a href="https://www.facebook.com/" target="_blank">
+            <img src="social.png" target="_blank" id="social">
+          </a>
+
+
+
+            <!--START BANNER-->
+
+      <div class="content">
+<h1>Tees</h1>
+
+
+<!--START PRODUCT GRID-->
+<div class="t">
+	<img src="images/t1.jpg" class="product">
+		<h3>Roll Light</h3>
+		<h4>$ 28.00 </h4>
+</div>
+
+<div class="t">
+		<img src="images/t2.jpg" class="product">
+		<h3>Mat Rats</h3>
+		<h4>$ 28.00 </h4>
+	</a>
+</div>
+
+<div class="t">
+	<img src="images/t3.jpg" alt="Tread (Navy)" class="product">
+		<h3>Newaza - Tiger</h3>
+		<h4>$ 28.00 </h4>
+	</a>
+</div>
+<!--END PRODUCT GRID-->
+
+
+      </div>
+    </main>
+
+    <footer>
+        <hr id="upperhr">
+    </footer>
+  </body>
+  <script type="text/javascript">
+  var cOpen=false;
+  var plus = document.getElementById("Clist")
+    console.log("I am the value of plus",plus);
+  plus.addEventListener("click", visible)
+
+  function visible (e){
+    var el = document.getElementById("plus");
+    if (!cOpen){
+    el.style.display = "block";
+    cOpen=true;
+  } else {
+    el.style.display = "none";
+    cOpen=false;
+  }
+  }
+  </script>
+</html>
