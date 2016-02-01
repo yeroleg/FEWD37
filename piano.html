@@ -1,4 +1,6 @@
-<script src="https://cdnjs.cloudflare.com/ajax/libs/howler/1.1.17/howler.min.js"></script>
+
+<!-- saved from url=(0048)http://z3lindo.github.io/nick-fewd-37/piano.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script src="./piano_files/howler.min.js"></script>
 
 <script>
 var howl = new Howl({
@@ -16,7 +18,7 @@ var howl = new Howl({
 });
 </script>
 
-<h1>Piano</h1>
+</head><body><h1>Piano</h1>
 
 <div class="keys">
   <div class="key" id="C">C</div>
@@ -64,47 +66,59 @@ var howl = new Howl({
 </style>
 
 <script>
+
+// Your code goes here...
 var c = document.querySelector("#C");
-c.addEventListener("click", playC);
-function playC (event) {
-  howl.play("C")
-}
-
 var d = document.querySelector("#D");
-d.addEventListener("click", playD);
-function playD (event) {
-  howl.play("D")
-}
-
 var e = document.querySelector("#E");
-e.addEventListener("click", playE);
-function playE (event) {
-  howl.play("E")
-}
-
 var f = document.querySelector("#F");
-f.addEventListener("click", playF);
-function playF(event) {
-  howl.play("F")
-}
-
 var g = document.querySelector("#G");
-g.addEventListener("click", playG);
-function playG(event) {
-  howl.play("G")
-}
-
 var a = document.querySelector("#A");
-a.addEventListener("click", playA);
-function playA(event) {
-  howl.play("A")
-}
-
 var b = document.querySelector("#B");
-b.addEventListener("click", playB);
-function playB(event) {
-  howl.play("B")
-}
 
+c.addEventListener("click", playC);
+d.addEventListener("click", playD);
+e.addEventListener("click", playE);
+f.addEventListener("click", playF);
+g.addEventListener("click", playG);
+a.addEventListener("click", playA);
+b.addEventListener("click", playB);
+
+function playC(event) {
+  event.preventDefault();
+  var cNote = c.textContent
+  howl.play(cNote)
+}
+function playD(event) {
+  event.preventDefault();
+  var dNote = d.textContent
+  howl.play(dNote)
+}
+function playE(event) {
+  event.preventDefault();
+  var eNote = e.textContent
+  howl.play(eNote)
+}
+function playF(event) {
+  event.preventDefault();
+  var fNote = f.textContent
+  howl.play(fNote)
+}
+function playG(event) {
+  event.preventDefault();
+  var gNote = g.textContent
+  howl.play(gNote)
+}
+function playA(event) {
+  event.preventDefault();
+  var aNote = a.textContent
+  howl.play(aNote)
+}
+function playB(event) {
+  event.preventDefault();
+  var bNote = b.textContent
+  howl.play(bNote)
+}
 
 </script>
+</body></html>
