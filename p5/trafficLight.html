@@ -1,0 +1,185 @@
+<html><head>
+    <meta charset="utf-8">
+    <title>Traffic Light</title>
+    <style media="screen">
+      .light {
+        width: 225px;
+        height: 520px;
+        background-color: rgba(240, 192, 15, .8);
+        margin:auto;
+        border-radius: 30px;
+        border: 1px solid;
+        border-color: rgba(0, 0, 0, .3);
+
+
+      }
+
+      .circle {
+        height: 146px;
+        width: 146px;
+        margin: 20px auto 0px auto;
+        background-color: rgba(0, 0, 0, 0.6);
+        border-radius: 50%;
+        border: 2px solid rgba(0, 0, 0, 1);
+        box-shadow: 0px -8px rgba(0, 0, 0, 1);
+      }
+
+      .stop {
+        height: 146px;
+        width: 146px;
+        background-color: rgba(255, 0, 0, 1);
+        transition: background-color 300ms, box-shadow 300ms;
+        border-radius: 50%;
+        box-shadow: 0px 0px 15px 5px rgba(255, 0, 0, 1);
+
+      }
+
+      .slow {
+        height: 146px;
+        width: 146px;
+        background-color: rgba(255, 255, 0, 1);
+        transition: background-color 300ms, box-shadow 300ms;
+        border-radius: 50%;
+        box-shadow: 0px 0px 15px 5px rgba(255, 255, 0, 1);
+
+      }
+
+      .go {
+        height: 146px;
+        width: 146px;
+        background-color: rgba(0, 255, 20, 1);
+        transition: background-color 300ms, box-shadow 300ms;
+        border-radius: 50%;
+        box-shadow: 0px 0px 15px 5px rgba(0, 255, 20, 1);
+
+
+      }
+
+
+    </style>
+  </head>
+  <body>
+<button type="button" class="stopBtn">Stop</button>
+<button type="button" class="slowBtn">Slow</button>
+<button type="button" class="goBtn">Go</button>
+<button type="button" class="cautionBtn">Caution</button>
+
+<main>
+  <div class="light">
+
+    <div class="circle">
+      <div class="stopChild">
+
+      </div>
+    </div>
+    <div class="circle">
+      <div class="slowChild">
+
+      </div>
+    </div>
+    <div class="circle">
+      <div class="goChild">
+
+      </div>
+    </div>
+  </div>
+</main>
+
+
+<script type="text/javascript">
+
+var stopClick = document.querySelector(".stopBtn");
+var slowClick = document.querySelector(".slowBtn");
+var goClick = document.querySelector(".goBtn");
+var cautionClick = document.querySelector(".cautionBtn");
+var flash;
+
+stopClick.addEventListener("click", turnRed);
+slowClick.addEventListener("click", turnYellow);
+goClick.addEventListener("click", turnGreen);
+cautionClick.addEventListener("click", turnCaution);
+
+function turnRed(event){
+  event.preventDefault();
+  var redLight = document.querySelector(".stopChild");
+  redLight.classList.add("stop");
+  var yellowLight = document.querySelector(".slowChild");
+  yellowLight.classList.remove("slow");
+  var greenLight = document.querySelector(".goChild");
+  greenLight.classList.remove("go");
+  window.clearInterval(flash);
+
+}
+
+function turnYellow(event){
+  event.preventDefault();
+  var yellowLight = document.querySelector(".slowChild");
+  yellowLight.classList.add("slow");
+  var redLight = document.querySelector(".stopChild");
+  redLight.classList.remove("stop");
+  var greenLight = document.querySelector(".goChild");
+  greenLight.classList.remove("go");
+  window.clearInterval(flash);
+
+}
+
+function turnGreen(event){
+  event.preventDefault();
+  var greenLight = document.querySelector(".goChild");
+  greenLight.classList.add("go");
+  var yellowLight = document.querySelector(".slowChild");
+  yellowLight.classList.remove("slow");
+  var redLight = document.querySelector(".stopChild");
+  redLight.classList.remove("stop");
+
+  window.clearInterval(flash);
+
+  }
+
+
+  function turnCaution(){
+    flash = setInterval(function() {toggleYellow()}, 1000);
+    var yellowLight = document.querySelector(".slowChild");
+    yellowLight.classList.remove("slow");
+    var redLight = document.querySelector(".stopChild");
+    redLight.classList.remove("stop");
+    var greenLight = document.querySelector(".goChild");
+    greenLight.classList.remove("go");
+  }
+
+  function toggleYellow() {
+    var yellowLight = document.querySelector(".slowChild");
+    yellowLight.classList.toggle("slow");
+
+  }
+
+
+
+    // clearInterval(turnCaution());
+
+
+
+
+
+
+
+
+
+
+
+/*
+function turnCaution(event){
+  event.preventDefault();
+  setInterval(toggleYellow, 1000);
+  function toggleYellow(){
+    var yellowLight = document.querySelector(".slowChild");
+    yellowLight.classList.toggle("slow");
+  }
+}
+*/
+
+</script>
+
+
+
+</body></html>

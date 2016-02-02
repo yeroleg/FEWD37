@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <link href='https://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
-    <title>Oleg's homepage</title>
+    <title>Oleg's Portfolio</title>
     <style>
       body{
         background-image: url(background.jpg);
@@ -19,43 +19,94 @@
         text-shadow: 0 0 3px red;
         font-size: 42px;
         text-align: center;
-    }
-    h2 {
-      font-size: 28px;
-    }
+}
       img{
           display: block;
           margin: auto;
           padding: auto;
           border-radius: 80%;
           border: 2px solid white;
-      }
-    p{
-      font-size: 30px;
-      font-family: 'Josefin Sans', sans-serif;
-      color: white;
-              text-shadow: 0 0 3px red;
-    }
-    ul {
-      font-family: 'Josefin Sans', sans-serif;
-      font-size: 20px;
-      color:white;
-              text-shadow: 0 0 3px red;
-    }
-    a{
-      color: white;
-      text-decoration: none;
-              text-shadow: 0 0 3px red;
-    }
+}
     a:hover{
       color: red;
       text-decoration: line-through;
-    }
-    .homework{
-      text-align: center;
-      font-size: 25px;
-      color: white;
-    }
+}
+        main {
+          width: 740px;
+          padding: 30px;
+          margin: 0px auto 200px auto;
+          background-color: rgba(0, 0, 0, 0.5);
+          border-bottom-left-radius: 5px;
+          border-bottom-right-radius: 5px;
+          color: rgba(255, 255, 255, 1);
+          font-family: 'Open Sans', helvetica, sans-serif;
+          font-size: 1.25em;
+        }
+        h2 {
+          font-weight: 200;
+          font-size: 2em;
+        }
+
+        a {
+          color: #A4F015;
+        }
+
+        table td a {
+          color: #A4F015;
+          font-weight: bold;
+        }
+
+        ul {
+          list-style: none;
+          font-family: 'Open Sans', helvetica, sans-serif;
+          line-height: 26px;
+
+        }
+
+        thead {
+          text-align: left;
+          font-weight: 100;
+          margin-left: 10px;
+        }
+
+        th {
+          font-weight: 500;
+        }
+
+        td {
+          padding: 20px 30px 20px 30px;
+          text-align: left;
+          margin: 1px 1px 1px 1px;
+          border: 1px solid rgba(255, 255, 255, 0.15);
+        }
+
+            @-webkit-keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .headline {
+            -webkit-animation: fadeIn .4s ease-in .5s both;
+            animation: fadeIn .4s ease-in .5s both;
+        }
+
+        .content {
+            -webkit-animation: fadeIn .4s ease-in .99s both;
+            animation: fadeIn .4s ease-in .99s both;
+        }
     </style>
   </head>
   <body>
@@ -63,25 +114,85 @@
   <img src="pic/me1.jpg"/ width="150" height="150"></h1>
     <h1>Oleg Yerofeyev</h1>
 </header>
-<p>HELLO! there is a few things about ME - </p>
-  <ul>
-      <li>Family</li>
-      <li>Code</li>
-      <li>Design</li>
-      <li>Grappling</li>
-  </ul>
-    <h2>PROJECTS:</h2>
-  <ul>
-    <ul class="homework"><a href="homeworkACME.html">ACME project</ul>
-    <ul class="homework"><a href="ACME-JS.html">ACME-JS project</ul>
-    <ul class="homework"><a href="calculators.html">Calculators</ul>
-    <ul class="homework"><a href="Blog.html">Blog</ul>
-    <ul class="homework"><a href="stop-light.html">StopLight</ul>
-    <ul class="homework"><a href="piano.html">Piano</ul>
-    <ul class="homework"><a href="todolist.html">TodoList</ul>
-    <ul class="homework"><a href="movie-search.html">Movie Search</ul>
-    <ul class="homework"><a href="spreadsheet.html">Spreadsheet</ul>
-    <ul class="homework"><a href="FinalProject/main.html">GREAT WHITE(in progress)</ul>
-    <ul class="homework"><a href="http://fitfightsf.com/">FitFight(WordPress)</ul>
-  </body>
+<main class="content">
+  <h2>My Project's</h2>
+  <table>
+    <thead>
+      <tr>
+      <th>Week</th>
+      <th>Title</th>
+      <th>URL</th>
+
+    </tr>
+
+    <tr>
+      <td>1</td>
+      <td>ACME Corp</td>
+      <td><a href="p1/homeworkACME.html">Link</a></td>
+    </tr>
+
+    <tr>
+      <td>2</td>
+      <td>Calculators</td>
+      <td><a href="p2/calculators.html">Link</a></td>
+    </tr>
+
+    <tr>
+      <td>3</td>
+      <td>ACME Javascript</td>
+      <td><a href="p3/ACME-JS.html">Link</a></td>
+    </tr>
+
+    <tr>
+      <td>4</td>
+      <td>Like Button &amp; Comment </td>
+      <td><a href="p4/Blog.html">Link</a></td>
+    </tr>
+
+    <tr>
+      <td>5</td>
+      <td>Traffic Light</td>
+      <td><a href="p5/trafficLight.html">Link</a></td>
+    </tr>
+
+    <tr>
+      <td>6</td>
+      <td>CSV To-Do List</td>
+      <td><a href="p6/todolist.html">Link</a></td>
+    </tr>
+
+    <tr>
+      <td>7</td>
+      <td>Movie Search</td>
+      <td><a href="p7/movie-search.html">Link</a></td>
+    </tr>
+
+    <tr>
+      <td>8</td>
+      <td>Spreadsheet</td>
+      <td><a href="p8/spreadsheet.html">Link</a></td>
+    </tr>
+
+    <tr>
+      <td>9</td>
+      <td>Chat App</td>
+      <td><a href="http://bradochazo.github.io/fewd/homework-week6/">Link</a></td>
+    </tr>
+
+    <tr>
+      <td>10</td>
+      <td>GREAT WHITE (in progress)</td>
+      <td><a href="finalproject/main.html">Link</a></td>
+    </tr>
+
+    <tr>
+      <td>11</td>
+      <td>FitFight (WordPress)</td>
+      <td><a href="http://fitfightsf.com/">Link</a></td>
+    </tr>
+
+
+
+</thead></table></main>
+</body>
 </html>

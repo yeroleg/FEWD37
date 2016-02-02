@@ -65,3 +65,7 @@ a:hover {
 .movie-release-date {
   color: #b6b6b6;
 }
+
+.hidden {
+  display: none !important;
+}

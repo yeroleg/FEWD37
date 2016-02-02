@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Calculators</title>
+    <link rel="stylesheet" href="stylesheet.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+
+    <h1>Calculators</h1>
+    <h2>Fahrenheit to Celcius</h2>
+
+    <div class="panel temp">
+      <input type="text" class="temp-f" placeholder="°F"> ⇄
+      <input type="text" class="temp-c" placeholder="°C">
+    </div>
+
+    <hr/>
+
+    <h2>Radius to Circumference</h2>
+
+    <div class="panel circum">
+      <div class="circle">
+      </div>
+      <input type="text" class="circum-r" placeholder="radius">
+      <input type="text" class="circum-c" placeholder="circumference" disabled>
+    </div>
+
+    <hr/>
+
+    <h2>Pythagorean Theorem</h2>
+
+    <div class="panel py">
+      <input type="text" class="py-a" placeholder="A">
+      <input type="text" class="py-b" placeholder="B">
+      <input type="text" class="py-c" placeholder="C" disabled>
+    </div>
+
+    <script type="text/javascript" src="interface.js"></script>
+    <script type="text/javascript">
+
+
+
+/* This function works
+      function calcFahrenheitToCelcius() {
+      var detected = tempF.value - 32;
+      var tempC = detected * .556;
+
+      return Math.round(tempC);
+
+    }
+*/
+
+    function calcFahrenheitToCelcius(tempF){
+      var tempC = (tempF - 32) * .556;
+
+      return Math.round(tempC);
+    }
+
+/* This function works
+    function calcCelciusToFarenheit() {
+      var detected = tempC.value * 1.8;
+      var tempF = detected + 32;
+
+      return tempF;
+    }
+*/
+    function calcCelciusToFarenheit(tempC){
+      var tempF = (tempC * 1.8) + 32;
+
+      return Math.round(tempF);
+    }
+
+/* This function works
+    function calcCircumference() {
+      var pi = 3.14;
+      var pies = 2 * pi;
+      var c = pies * r.value;
+
+      return c;
+    }
+    */
+
+    function calcCircumference(r) {
+      var c = (2 * 3.14) * r;
+
+      return c;
+    }
+/* This function works
+    function calcLongestSide() {
+      var firstPart = pyA.value * pyA.value;
+      var secondPart = pyB.value * pyB.value;
+      var thirdPart = firstPart + secondPart;
+      var pyC= Math.sqrt(thirdPart);
+
+      return pyC;
+
+
+    }
+*/
+    function calcLongestSide(pyA, pyB) {
+      var pyC = Math.sqrt((pyA * pyA) + (pyB * pyB));
+
+      return pyC;
+
+
+    }
+
+
+
+
+
+
+
+
+    </script>
+  </body>
+</html>

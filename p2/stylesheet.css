@@ -1,0 +1,129 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Roboto Slab', serif;
+  font-size: 20px;
+  line-height: 30px;
+  background-color: rgba(40, 40, 40, 1);
+  color: rgba(215, 215, 215, 1);;
+}
+
+h1 {
+  text-align: center;
+  font-size: 60px;
+  font-weight: 300;
+  color: rgba(215, 215, 215, 1);;
+  margin-bottom: 125px;
+}
+h2 {
+  text-align: center;
+  font-size: 40px;
+  font-weight: 100;
+  color: #f0f0f0;
+}
+input {
+  font-size: 24px;
+  line-height: inherit;
+  padding: 5px;
+  text-align: center;
+  font-family: 'Roboto Slab', serif;
+  font-style: italic;
+  font-weight: 600;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  background-color: transparent;
+  color: #f0f0f0;
+  border-color: #3399ff;
+
+
+}
+
+input:focus {
+  outline: none;
+}
+input[disabled] {
+  border: 0;
+}
+
+hr {
+  margin: 0px auto 50px; auto;
+  width: 900px;
+  border-color: rgba(180, 180, 180, 1);
+
+}
+.panel {
+  margin: 50px auto 150px auto;
+  max-width: 600px;
+}
+.py {
+  background-image: url('triangle.png');
+  background-size: 400px 260px;
+  background-repeat: no-repeat;
+  background-position: top center;
+  height: 300px;
+  width: 600px;
+  position: relative;
+  margin-left: 0 auto 0 auto;
+}
+
+.py-a {
+  position: absolute;
+  top: 100px;
+  left: 60px;
+  width: 50px;
+}
+.py-b {
+  position: absolute;
+  top: 240px;
+  left: 250px;
+  width: 50px;
+}
+.py-c {
+  position: absolute;
+  left: 320px;
+  top: 80px;
+  width: 200px;
+  text-align: left;
+  font-style: normal;
+}
+.circum {
+  position: relative;
+  height: 200px;
+  max-width: 600px;
+  margin: 50px auto 200px auto;
+}
+.circle {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  border: 5px solid #f0f0f0;
+  position: absolute;
+  left: 100px;
+}
+.circum-r {
+  position: absolute;
+  top: 75px;
+  left: 150px;
+  width: 100px;
+}
+.circum-c {
+  position: absolute;
+  top: 75px;
+  left: 320px;
+  width: 180px;
+  text-align: left;
+  font-style: normal;
+}
+.temp-f,
+.temp-c {
+  width: 100px;
+  font-family: 'Roboto Slab', serif;
+  font-weight: 600;
+  margin: 10px;
+
+}
+.temp {
+  padding-left: 165px;
+}
