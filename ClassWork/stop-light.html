@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Stop Light</title>
+  </head>
+  <style>
+  .stoplight {
+    padding: 50px;
+    width: 110px;
+    background-color: orange;
+    border-radius: 25px;
+    border: 3px solid black;
+    margin: 0 auto;
+  }
+    .light {
+    margin: 0 auto;
+    width: 110px;
+    height: 110px;
+    background-color: rgb(114, 88, 0);
+    border-radius: 100%;
+    border: 3px solid black;
+    margin-top: 10px;
+    border-top-width: 6px;
+    border-bottom-width: 1px;
+  }
+  .red {
+    background-color: red;
+  }
+  .yellow{
+    background-color: yellow;
+  }
+  .green {
+    background-color: green;
+  }
+</style>
+  <body>
+    <header>
+      <button type="button" class="stop">Stop</button>
+      <button type="button" class="slow">Slow</button>
+      <button type="button" class="go">Go</button>
+      <button type="button" class="caution">Caution</button>
+    </header>
+    <footer>
+      <div class="stoplight">
+        <div class="light lightred">
+        </div>
+        <div class="light lightyellow">
+        </div>
+        <div class="light lightgreen">
+        </div>
+      </div>
+    </footer>
+    
+    <script type="text/javascript">
+    var redButton = document.querySelector(".stop");
+    var yellowButton = document.querySelector(".slow");
+    var greenButton = document.querySelector(".go");
+    var cautionButton = document.querySelector(".caution");
+    var timer;
+
+    var lightyellow = document.querySelector(".lightyellow");
+    var lightred = document.querySelector(".lightred");
+    var lightgreen = document.querySelector(".lightgreen");
+
+
+    redButton.addEventListener("click", turnRed);
+    yellowButton.addEventListener("click", turnYellow);
+    greenButton.addEventListener("click", turnGreen);
+    cautionButton.addEventListener("click", turnCaution);
+
+    function turnRed(event){
+    event.preventDefault();
+    lightyellow.classList.remove("yellow");
+    lightgreen.classList.remove("green");
+    lightred.classList.add("red");
+  };
+
+    function turnYellow(event){
+    event.preventDefault();
+    lightred.classList.remove("red");
+    lightgreen.classList.remove("green");
+    lightyellow.classList.add("yellow");
+  };
+
+    function turnGreen(event){
+    event.preventDefault();
+    lightyellow.classList.remove("yellow");
+    lightred.classList.remove("red");
+    lightgreen.classList.add("green");
+  };
+
+  function turnCaution(event){
+  event.preventDefault();
+  lightgreen.classList.remove("green");
+  lightred.classList.remove("red");
+  timer = setInterval(toggleSlow, 1000);
+}
+
+function toggleSlow(){
+  lightyellow.classList.toggle("yellow")
+}
+    </script>
+  </body>
+</html>
